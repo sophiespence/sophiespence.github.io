@@ -7,33 +7,6 @@
     text-rendering: geometricPrecision;
 }
 
-#acknowledgement {
-    position:fixed;
-    display:none;
-    width:100vw;
-    height:100vh;
-    background: rgba(255,255,255,0.9);
-    z-index: 20;
-    transition: 0.25s ease-out;
-    cursor:pointer;
-}
-
-#acknowledgement p {
-    position:relative;
-    padding:50px;
-    width:40vw;
-    height:70vh;
-    font-family: Times;
-    font-weight: 400;
-    font-size: 3vw;
-    left:20%;
-    top:30%;
-    transform:translate(-50%,-50%);
-    pointer-events: all;
-    line-height: 1;
-    margin-bottom:-30%;
-}
-
 a {
     text-decoration: none;
     color:black;
@@ -158,10 +131,68 @@ a:hover {
     left:-5px;
 }
 
+#mobile {
+    display:none;
+}
+
   @media only screen and (max-device-width : 1024px) {
 
+    #mobile {
+        display:inherit;
+        font-family: Helvetica;
+        font-size: 4.5vw;
+        position:absolute;
+        width:95vw;
+        line-height: 1.5;
+    }
+
+    #menu {
+        font-weight: 400;
+        font-size:30px;
+        position:fixed;
+        right:20px;
+        top:0;
+        padding:0px;
+        z-index:10;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        width: 97vw;
+        height:100vh;
+        background-color: rgba(255,255,255,0.9);
+        z-index: 1;
+        pointer-events: none;
+        padding:10px;
+        transform:translateY(-4vh);
+      }
+
+      .dropdown-content a {
+          pointer-events: all;
+      }
+      
+    .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+    #title {
+        position:fixed;
+        bottom:-10px;
+        padding:10px;
+    }
+    
+      #desktop {
+        display:none;
+    }
+    
     #home-img {
-        max-height:50vh;
+        max-width:70vw;
     }
 
     #left-title h1{
