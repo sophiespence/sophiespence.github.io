@@ -1,0 +1,105 @@
+* {
+    text-rendering: geometricPrecision;
+}
+
+html {
+    background: white;
+    padding: 0;
+    margin: 0 0 0 0;
+}
+
+body {
+    margin: 0 0 0 0;
+    padding: 0;
+    font-family: Helvetica;
+    font-size: 0.8em;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+
+/* HEADER */
+
+.header {
+    display:flex;
+    flex-direction: row;
+    position:fixed;
+    width:100vw;
+    box-sizing: border-box;
+    padding:0.5em;
+    padding-left: 0.8em;
+    background-color: white;
+    z-index:1;
+    line-height: 2;
+}
+
+#header-dropdown {
+    display:none;
+    line-height: 2;
+}
+
+.header-right {
+    cursor:pointer;
+}
+
+.footer {
+    display:flex;
+    position:fixed;
+    width:100vw;
+    bottom:0;
+    z-index: 1;
+}
+
+.footer span {
+    display:flex;
+    width:100vw;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding:5px;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+
+/* WORKS PAGE */
+
+.work-container {
+    transform:translateY(3em);
+    width:100vw;
+    box-sizing: border-box;
+    padding:5px;
+    margin-bottom: 8em;
+}
+
+.work-container img {
+    width:100%;
+    box-sizing: border-box;
+    padding:5px;
+}
+
+/* ABOUT */
+
+.info {
+    padding:10px;
+}
+
+
+@media only screen and (min-device-width : 1024px) {
+    
+
+.header {
+    background-color: rgba(0,0,0,0);
+}
+
+.work-element {
+    width:40vw;
+}
+
+.work-container {
+    display:flex;
+    justify-content: center;
+}
+
+}

@@ -4,130 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
-    <title>Sophie Spence</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Sophie Spence: Home</title>
 </head>
-<body>   
+<body>
 
-    <header id="desktop">
-        <div id="left-title">
-                <a href="index.html"><h1>Sophie Spence</h1></a>
-        </div>    
-        <div id="mid-title">
-                <h1><a href="portrait.html">Portraits </a>,  <a href="landscape.html">Landscapes</a>,  <a href="works.html">Selected Works</a>, <a href="https://bookshopbyuro.com/products/co-publishing-issue-02-water?ltclid=2371b669-fe51-4c02-9fe6-17a34bc56145" target="_blank" rel="noopener noreferrer">Co-Issue 02</a></h1>
-        </div>    
-        <div id="right-title">
-                <h1><a href="about.html">About</a>,  <a href="mailto:spence.sophie@gmail.com">Contact</a>,  <a href="https://www.instagram.com/sspences/" target="_blank" rel="noopener noreferrer">Instagram</a></h1>
-        </div> 
-    </header>
-
-    <header id="mobile">
-        <div class="dropdown">
-            <span id="menu">⚌</span>
-            <div class="dropdown-content">
-            <br>
-            <a href="portrait.html">Portraits</a><br>
-            <a href="landscape.html">Landscapes</a><br>
-            <a href="works.html">Selected Works</a><br>
-            <a href="https://bookshopbyuro.com/products/co-publishing-issue-02-water?ltclid=2371b669-fe51-4c02-9fe6-17a34bc56145" target="_blank" rel="noopener noreferrer">Co-Publishing Issue 02</a><br>
-            <a href="about.html">About</a><br>
-            <a href="mailto:spence.sophie@gmail.com">Contact</a><br>
-            <a href="https://www.instagram.com/sspences/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<div class="header">
+        
+        <div class="header-right">
+                <a id="menu-button" onclick="ToggleMenu()">Menu</a>
+                <div id="header-dropdown">
+                <a href="site.html">Site / Sight</a>
+                <br> 
+                <a href="portrait.html">Portrait</a>
+                <br>    
+                <a href="landscape.html">Landscape</a>
+                <br>
+                <a href="works.html">Selected Works</a>
+                <br>
+                <a href="about.html">About</a>
+                <br>
+                <a href="mailto:spence.sophie@gmail.com">Contact</a>
+                </div>
         </div>
-        <p id="title">Sophie Spence</p>
-        </div>
-    </header>
+</div>  
 
-<div class="container">
+<div class="footer">
+    <span><a href="index.html">S.</a><a href="index.html">S.</a></span>
+</div>
 
-    <div class="mySlides">
-        <img src="other-1.JPG" style="max-height:80vh">
-    </div>
-  
-    <div class="mySlides">
-        <img src="other-2.JPG" style="max-height:80vh">
-    </div>
-  
-    <div class="mySlides">
-        <img src="other-3.JPG" style="max-height:80vh">
-    </div>
-  
-    <div class="mySlides">
-        <img src="other-4.jpg" style="max-height:80vh">
-    </div>
-  
-    <div class="mySlides">
-        <img src="other-5.jpg" style="max-height:80vh">
-    </div>
-  
-    <div class="mySlides">
-        <img src="other-6.jpeg" style="max-height:75vh">
+
+<div class="work-container">
+    
+    <div class="work-element">
+    <img src="images/other-1.JPG">
+    <img src="images/other-2.JPG">
+    <img src="images/other-3.JPG">
+    <img src="images/other-4.jpg">
+    <img src="images/other-5.jpg">
+    <img src="images/other-6.jpeg">
+    <img src="images/other-7.jpg">
+    <img src="images/other-8.jpg">
+    <img src="images/other-9.jpg">
+    <img src="images/other-10.jpg">
+    <img src="images/other-11.jpg">
+    <img src="images/other-12.jpg">
     </div>
 
-    <div class="mySlides">
-        <img src="other-7.jpg" style="max-height:75vh">
-    </div>
-
-    <div class="mySlides">
-        <img src="other-8.jpg" style="max-height:75vh">
-    </div>
-
-    <div class="mySlides">
-        <img src="other-9.jpg" style="max-height:75vh">
-    </div>
-
-    <div class="mySlides">
-        <img src="other-10.jpg" style="max-height:75vh">
-    </div>
-
-    <div class="mySlides">
-        <img src="other-11.jpg" style="max-height:75vh">
-    </div>
-
-    <div class="mySlides">
-        <img src="other-12.jpg" style="max-height:75vh">
-    </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)"><</a>
-    <a class="next" onclick="plusSlides(1)">></a>
-
-</div> 
+</div>
 
 
 </body>
 
+
 <script>
 
-var slideIndex = 1;
-showSlides(slideIndex);
+function ToggleMenu() {
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+    var menuButton = document.getElementById('menu-button');
+    var menuContent = document.getElementById('header-dropdown');
+
+if (menuContent.style.display == "block") {
+    menuContent.style.display = "none";
+    menuButton.innerHTML = "Menu";
+    menuButton.style.color = "black";
+} else {
+    menuContent.style.display = "block";
+    menuButton.innerHTML = "Close";
+    menuButton.style.color = "grey";
 }
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
 
 
 </script>
-
 
 </html>

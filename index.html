@@ -4,54 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
-    <title>Sophie Spence</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Sophie Spence: Home</title>
 </head>
 <body>
 
+<div class="header">
+        
+        <div class="header-right">
+                <a id="menu-button" onclick="ToggleMenu()">Menu</a>
+                <div id="header-dropdown">
+                <a href="site.html">Site / Sight</a>
+                <br> 
+                <a href="portrait.html">Portrait</a>
+                <br>    
+                <a href="landscape.html">Landscape</a>
+                <br>
+                <a href="works.html">Selected Works</a>
+                <br>
+                <a href="about.html">About</a>
+                <br>
+                <a href="mailto:spence.sophie@gmail.com">Contact</a>
+                </div>
+        </div>
+</div>   
 
-<header id="desktop">
-    <div id="left-title">
-            <a href="index.html"><h1>Sophie Spence</h1></a>
-    </div>    
-    <div id="mid-title">
-            <h1><a href="portrait.html">Portraits</a>,  <a href="landscape.html">Landscapes</a>,  <a href="works.html">Selected Works</a>, <a href="https://bookshopbyuro.com/products/co-publishing-issue-02-water?ltclid=2371b669-fe51-4c02-9fe6-17a34bc56145" target="_blank" rel="noopener noreferrer">Co-Issue 02</a></h1>
-    </div>    
-    <div id="right-title">
-            <h1><a href="about.html">About</a>,  <a href="mailto:spence.sophie@gmail.com">Contact</a>,  <a href="https://www.instagram.com/sspences/" target="_blank" rel="noopener noreferrer">Instagram</a></h1>
-    </div> 
-</header>
+<div class="footer">
+    <span><a href="index.html">S.</a><a href="index.html">S.</a></span>
+</div>
 
-<header id="mobile">
-    <div class="dropdown">
-        <span id="menu">⚌</span>
-        <div class="dropdown-content">
-        <br>
-        <a href="portrait.html">Portraits</a><br>
-        <a href="landscape.html">Landscapes</a><br>
-        <a href="works.html">Selected Works</a><br>
-        <a href="https://bookshopbyuro.com/products/co-publishing-issue-02-water?ltclid=2371b669-fe51-4c02-9fe6-17a34bc56145" target="_blank" rel="noopener noreferrer">Co-Publishing Issue 02</a><br>
-        <a href="about.html">About</a><br>
-        <a href="mailto:spence.sophie@gmail.com">Contact</a><br>
-        <a href="https://www.instagram.com/sspences/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<div class="work-container">
+    
+    <div class="work-element">
+    <img src="images/home.png">
     </div>
-    <p id="title">Sophie Spence</p>
-    </div>
-</header>
 
-<img id="home-img" src="home.png">
-
+</div>
 
 </body>
 
+
 <script>
 
-const acknowledgement = document.querySelector('#acknowledgement');
+function ToggleMenu() {
 
-acknowledgement.addEventListener('click', () => {
-    document.querySelector('#acknowledgement').style.display="none";
-    document.querySelector('#acknowledgement').style.pointerEvents="none";
-})
+    var menuButton = document.getElementById('menu-button');
+    var menuContent = document.getElementById('header-dropdown');
+
+if (menuContent.style.display == "block") {
+    menuContent.style.display = "none";
+    menuButton.innerHTML = "Menu";
+    menuButton.style.color = "black";
+} else {
+    menuContent.style.display = "block";
+    menuButton.innerHTML = "Close";
+    menuButton.style.color = "grey";
+}
+}
+
+
+
 </script>
 
 </html>

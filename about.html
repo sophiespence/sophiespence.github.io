@@ -4,48 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style2.css">
-    <title>Sophie Spence</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Sophie Spence: Home</title>
 </head>
-<body>  
+<body>
 
-
-    <header id="desktop">
-        <div id="left-title">
-                <a href="index.html"><h1>Sophie Spence</h1></a>
-        </div>    
-        <div id="mid-title">
-                <h1><a href="portrait.html">Portraits</a>,  <a href="landscape.html">Landscapes</a>,  <a href="works.html">Selected Works</a>, <a href="https://bookshopbyuro.com/products/co-publishing-issue-02-water?ltclid=2371b669-fe51-4c02-9fe6-17a34bc56145" target="_blank" rel="noopener noreferrer">Co-Issue 02</a></h1>
-        </div>    
-        <div id="right-title">
-                <h1><a href="about.html">About</a>,  <a href="mailto:spence.sophie@gmail.com">Contact</a>,  <a href="https://www.instagram.com/sspences/" target="_blank" rel="noopener noreferrer">Instagram</a></h1>
-        </div> 
-    </header>
-
-    <header id="mobile">
-        <div class="dropdown">
-            <span id="menu">⚌</span>
-            <div class="dropdown-content">
-            <br>
-            <a href="portrait.html">Portraits</a><br>
-            <a href="landscape.html">Landscapes</a><br>
-            <a href="works.html">Selected Works</a><br>
-            <a href="https://bookshopbyuro.com/products/co-publishing-issue-02-water?ltclid=2371b669-fe51-4c02-9fe6-17a34bc56145" target="_blank" rel="noopener noreferrer">Co-Publishing Issue 02</a><br>
-            <a href="about.html">About</a><br>
-            <a href="mailto:spence.sophie@gmail.com">Contact</a><br>
-            <a href="https://www.instagram.com/sspences/" target="_blank" rel="noopener noreferrer">Instagram</a>
+<div class="header">
+        
+        <div class="header-right">
+                <a id="menu-button" onclick="ToggleMenu()">Menu</a>
+                <div id="header-dropdown">
+                <a href="site.html">Site / Sight</a>
+                <br> 
+                <a href="portrait.html">Portrait</a>
+                <br>    
+                <a href="landscape.html">Landscape</a>
+                <br>
+                <a href="works.html">Selected Works</a>
+                <br>
+                <a href="about.html">About</a>
+                <br>
+                <a href="mailto:spence.sophie@gmail.com">Contact</a>
+                </div>
         </div>
-        <p id="title">Sophie Spence</p>
-        </div>
-    </header>
+</div> 
 
-<div id="about">
-    <p>Sophie Spence is a Naarm based artist, currently undertaking a Bachelor of Arts (Photography) at RMIT. Her developing photographic practice explores personal experiences of womanhood and mental health. As a member of Collider she explores the use of archival material to consider and undertake a process of unlearning around social histories and sense of place.</p>
-    <p>You can find her at @sspences, or email her at spence.sophie@gmail.com</p>
+<div class="footer">
+    <span><a href="index.html">S.</a><a href="index.html">S.</a></span>
 </div>
+
+
+<div class="work-container">
+    
+    <div class="work-element">
+        <div class="info">Sophie Spence is a Naarm based artist, currently undertaking a Bachelor of Arts (Photography) at RMIT. Her developing photographic practice explores personal experiences of womanhood and mental health. 
+        <br><br>
+        As a member of <a href="https://collider-collective.github.io/" target="_blank" style="text-decoration: underline;">COLLIDER</a> she explores the use of archival material to consider and undertake a process of unlearning around social histories and sense of place.<br><br>
+        You can find her at <a href="https://www.instagram.com/babyspinach2/" style="text-decoration: underline;" target="_blank">@babyspinach2</a>, or email her at <a href="mailto:spence.sophie@gmail.com" style="text-decoration: underline;">spence.sophie@gmail.com</a></div>
+    </div>
+
+</div>
+
 
 </body>
 
 
+<script>
+
+function ToggleMenu() {
+
+    var menuButton = document.getElementById('menu-button');
+    var menuContent = document.getElementById('header-dropdown');
+
+if (menuContent.style.display == "block") {
+    menuContent.style.display = "none";
+    menuButton.innerHTML = "Menu";
+    menuButton.style.color = "black";
+} else {
+    menuContent.style.display = "block";
+    menuButton.innerHTML = "Close";
+    menuButton.style.color = "grey";
+}
+}
+
+
+
+</script>
 
 </html>
+
+
+
+
+
